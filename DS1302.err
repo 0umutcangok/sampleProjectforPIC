@@ -1,0 +1,4 @@
+*** Error 128 "DS1302.c" Line 37(2,7): A #DEVICE required before this line
+--- Info 300 "DS1302.c" Line 39(24,28): More info:   ** I/O error 131
+      1 Errors,  0 Warnings.
+Build Failed.

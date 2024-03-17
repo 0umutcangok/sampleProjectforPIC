@@ -1,0 +1,7 @@
+D G "__PCM__" 0 0 ""5.007""
+D G "__DEVICE__" 0 0 ""
+D G "__DATE__" 0 0 ""28-Oca-24""
+D G "__TIME__" 0 0 ""22:49:06"" "DS1302.C                           ////"
+D G "RTC_SCLK" 0 33 "PIN_C3"
+D G "RTC_IO" 0 34 "PIN_D6"
+D G "RTC_RST" 0 35 "PIN_D4"

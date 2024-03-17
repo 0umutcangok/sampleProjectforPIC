@@ -1,0 +1,239 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+006     lcd
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     lcdline
+028-029 strtok.save
+02A-02D _Randseed
+02E-037 dht_dat
+038     @TRIS_C
+039     temperature
+03A     humidity
+03B     saniye
+03C     dakika
+03D     saat
+03E     gun
+03F     ay
+040     yil
+041     haftanin_gunu
+042     sayici
+043     zamanlayici
+044     rtc_init.x
+044     @PRINTF_D0_649.P1
+044     lcd_init.i
+044     read_dht.GlobalErr
+044     rtc_get_date.@SCRATCH1
+044     rtc_get_time.@SCRATCH1
+044     MAIN.@SCRATCH1
+044     @PSTRINGC7_649.@SCRATCH1
+045     read_dht.dht_in
+045     @PRINTF_D0_649.P1
+045     write_ds1302.cmd
+045     lcd_init.@SCRATCH1
+045     rtc_init.@SCRATCH1
+045     MAIN.@SCRATCH2
+045     @PSTRINGC7_649.@SCRATCH2
+046     read_dht.i
+046     write_ds1302.data
+046     @PSTRINGCN7_649.P1
+046     MAIN.@SCRATCH3
+046     @PSTRINGC7_649.@SCRATCH3
+046     @PRINTF_D0_649.@SCRATCH1
+047     read_dht.dht_check_sum
+047     @PRINTF_D_649.P1
+047     @PSTRINGC7_649.@SCRATCH4
+047     @PSTRINGCN7_649.@SCRATCH1
+047     @PRINTF_D0_649.@SCRATCH2
+048     read_ds1302.cmd
+048     @PRINTF_D_649.P1
+048     read_dht.@SCRATCH1
+048     @PSTRINGCN7_649.@SCRATCH2
+048     @PRINTF_D0_649.@SCRATCH3
+049     rm_bcd.data
+049     read_ds1302.i
+049     read_dht.@SCRATCH2
+049     @PSTRINGCN7_649.@SCRATCH3
+049     @PRINTF_D_649.@SCRATCH1
+049     @PRINTF_D0_649.@SCRATCH4
+04A     read_ds1302.data
+04A     rm_bcd.i
+04A     leer_dht_dat.i
+04A     @PSTRINGCN7_649.@SCRATCH4
+04A     @PRINTF_D_649.@SCRATCH2
+04B     write_ds1302_byte.cmd
+04B     leer_dht_dat.result
+04B     rm_bcd.@SCRATCH1
+04B     @PRINTF_D_649.@SCRATCH3
+04C     write_ds1302_byte.i
+04C     leer_dht_dat.@SCRATCH1
+04C     rm_bcd.@SCRATCH2
+04C     @PRINTF_D_649.@SCRATCH4
+04D     lcd_putc.c
+04D     @DIV88.P1
+04D     @MUL88.P2
+04E     @delay_ms1.P1
+04E     @DIV88.P2
+04E     lcd_gotoxy.x
+04E     @MUL88.P1
+04F     lcd_gotoxy.y
+04F     @DIV88.@SCRATCH1
+050     lcd_gotoxy.address
+051     lcd_send_byte.address
+052     lcd_send_byte.n
+053     lcd_read_byte.low
+053     lcd_send_byte.@SCRATCH1
+054     lcd_send_nibble.n
+054     lcd_read_byte.high
+055     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+09C.6   C1OUT
+09C.7   C2OUT
+0FF     @INTERRUPT_AREA
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+000038  LCD_INIT_STRING.call
+00003C  LCD_INIT_STRING.data
+000040  timer0_kesme
+000047  timer1_kesme
+000061  @const998.call
+000067  @const1000.call
+00006C  @const1001.call
+000073  @const1002.call
+000078  @const1014.call
+000083  @const1020.call
+000089  @const1024.call
+000095  @const1025.call
+0000A0  @const1029.call
+0000AA  @const1032.call
+0000B5  @const1033.call
+0000BF  @const1035.call
+0000C7  @const1036.call
+0000CB  @const1038.call
+0000D3  @const1039.call
+0000D9  @const1041.call
+0000E4  @const1042.call
+0000E9  @const1043.call
+0000F1  @const1044.call
+0000F6  @delay_ms1
+00010B  lcd_send_nibble
+000117  lcd_send_byte
+000118  lcd_read_byte
+000151  lcd_init
+00017D  lcd_gotoxy
+000197  @goto10605
+00019F  lcd_putc
+0001C6  @PSTRINGC7_649
+000211  write_ds1302_byte
+00022F  write_ds1302
+00023E  read_ds1302
+00026E  rtc_init
+000292  rm_bcd
+00029E  @MUL88
+0002D1  read_dht
+0002D2  dht_init
+00030B  leer_dht_dat
+00033A  @PSTRINGCN7_649
+00038E  @DIV88
+0003A3  @PRINTF_D_649
+0003FA  @PRINTF_D0_649
+000800  @cinit1
+000800  MAIN
+00080B  @cinit2
+000B9A  rtc_get_time
+000BC1  rtc_get_date
+000FAB  @goto12031
+0136  StrtoulGO
+0136  StrtolGO
+085C  kesme
+0DC4  normal_isi
+0E34  tehlikeli_isi
+0EA3  asiri_isi
+
+Project Directory:
+    C:\Users\bune_\Desktop\project_PIC\
+
+Project Files:
+    main.c                                                  [28-Oca-24 22:57  CRC=854FB837]
+    ..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h  [21-Haz-13 16:04  CRC=4E65664C]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\lcd420.c   [14-Nis-09 10:58  CRC=C5A307B3]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h   [08-Haz-11 14:39  CRC=0B6669CF]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h   [16-Tem-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\string.h   [14-Tem-11 10:13  CRC=23EDEC8F]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h    [03-Oca-08 13:55  CRC=2D1F019F]
+    dht-11.c                                                [06-Ara-23 00:22  CRC=F3500A4B]
+    ds1302.c                                                [26-Kas-23 23:07  CRC=2438A8CE]
+
+Source signature=BB09C686
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

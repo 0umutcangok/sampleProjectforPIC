@@ -1,0 +1,6 @@
+D G "__PCM__" 0 0 ""5.007""
+D G "__DEVICE__" 0 0 ""
+D G "__DATE__" 0 0 ""28-Oca-24""
+D G "__TIME__" 0 0 ""22:49:28""
+D G "dht11" 0 3 "PIN_A1"
+V G "dht_dat" 0 9 "int8[10]" `34  "Output data will be here"
