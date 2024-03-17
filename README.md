@@ -1,4 +1,4 @@
-# sampleProjectforPIC
+# Simple Project for PIC
 
 Hello Everyone! Today I'm going to introduce my simple PIC project.
 The project has made a project to control a baby unit by using PIC microcontroller with some sensors and integrated circuits. You can follow the describition below to run this project on your PC.
